@@ -12,14 +12,14 @@ class Table extends Component {
   };
 
   componentDidMount() {
-    this.fetchUsers();
+    this.fetchEvents();
   }
 
   handleChange = ( event ) => {
     this.setState( { filter: event.target.value } );
   };
 
-  fetchUsers() {
+  fetchEvents() {
     fetch( baseURL )
       .then( response => response.json() )
       .then( data => this.setState( {
