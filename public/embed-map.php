@@ -24,8 +24,6 @@ class IIP_Map_Embed {
 
     wp_enqueue_style( 'ol-frontend', plugin_dir_url( __FILE__ ) . 'css/ol.css', array(), $this->version, 'all' );
 
-    wp_enqueue_style( 'iip-table', plugin_dir_url( __FILE__ ) . 'css/results.css', array(), $this->version, 'all' );
-
 	wp_register_script( 'table-button', plugin_dir_url( __FILE__ ) . 'js/dist/table-button.min.js', array(), null, true );
 
 	wp_register_script( 'event-table', plugin_dir_url( __FILE__ ) . 'table/js/dist/table-app.js', array(), null, true );
