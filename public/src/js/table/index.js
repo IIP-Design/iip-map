@@ -2,6 +2,7 @@
 import 'isomorphic-fetch';
 import { polyfill } from 'es6-promise';
 
+
 polyfill();
 
 import React, { Component } from 'react';
@@ -121,12 +122,17 @@ const buildAdditional = ( field ) => {
 };
 
 class Table extends Component {
-  state = {
-    isLoading: true,
-    filter: '',
-    events: [],
-    error: null
-  };
+  constructor( props ) {
+    super( props );
+    this.state = {
+      isLoading: true,
+      filter: '',
+      events: [],
+      error: null,
+      checked: false
+    };
+    this.handleCheckboxChange = this.handleCheckboxChange.bind( this );
+  }
 
   componentDidMount() {
     this.fetchEvents();
@@ -134,6 +140,10 @@ class Table extends Component {
 
   handleChange = ( event ) => {
     this.setState( { filter: event.target.value } );
+  };
+
+  handleCheckboxChange = ( event ) => {
+    this.setState( { checked: event.target.checked } );
   };
 
   fetchEvents() {
@@ -148,12 +158,24 @@ class Table extends Component {
 
   render() {
     const {
-      isLoading, events, error, filter
+      isLoading, events, error, filter, checked
     } = this.state;
+
     const lowercasedFilter = filter.toLowerCase();
-    const filteredData = events.filter( event => Object.keys( event )
+    let filteredData = events.filter( event => Object.keys( event )
       .some( key => JSON.stringify( event[key] ).toLowerCase().includes( lowercasedFilter ) ) );
 
+    if ( checked ) {
+      filteredData = filteredData.filter( ( eventData ) => {
+        const { fields } = eventData.properties;
+        const dateField = parseSection( mapping.date_arr, fields );
+        if ( dateField.length < 1 || !dateField[0].month || !dateField[0].day ) {
+          return true;
+        }
+        const eventDate = new Date( currentYear, dateField[0].month, dateField[0].day );
+        return todaysDate <= eventDate;
+      } );
+    }
     return (
       <React.Fragment>
         <div className="table-controls">
@@ -169,6 +191,13 @@ class Table extends Component {
             value={ filter }
             onChange={ this.handleChange }
           />
+
+        </div>
+        <div className="table-check-wrap">
+          <label htmlFor="tableCheck">
+            <input id="tableCheck" type="checkbox" value={ checked } onChange={ this.handleCheckboxChange } />
+            Remove Past Events
+          </label>
         </div>
         <div className="event-table">
           { error ? <p>{ error.message }</p> : null }

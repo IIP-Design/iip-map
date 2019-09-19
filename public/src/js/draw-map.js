@@ -153,10 +153,11 @@ function buildFilter( m ) {
         if ( pastEventsCheckbox.checked ) {
           const { fields } = marker.properties;
           const dateField = parseSection( mapping.date_arr, fields );
-          const eventDate = new Date( `${currentYear}, ${dateField[0].month}, ${dateField[0].day}` );
-          if ( todaysDate > eventDate ) {
-            return false;
+          if ( dateField.length < 1 || !dateField[0].month || !dateField[0].day ) {
+            return true;
           }
+          const eventDate = new Date( currentYear, dateField[0].month, dateField[0].day );
+          return todaysDate <= eventDate;
         }
         return true;
       } )
