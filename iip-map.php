@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Map Embed for IIP Properties
  * Description: Adds ability to embed a Google map onto a WordPress site
- * Version: v2.1.0
+ * Version: v2.1.1
  * Author: Marek Rewers
  * Text Domain: iip-map
  * License: GPLv2 or laters

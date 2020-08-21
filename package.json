@@ -1,6 +1,6 @@
 {
   "name": "iip-map",
-  "version": "v2.1.0",
+  "version": "v2.1.1",
   "description": "WordPress plugin used to embed Google maps and populate it with data via the Screendoor API",
   "repository": {
     "type": "git",
