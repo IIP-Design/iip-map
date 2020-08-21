@@ -7,5 +7,8 @@ npm-debug.log
 # Environment
 stats.json
 
+# Editor Configs
+.vscode/
+
 # Misc
 .DS_Store
