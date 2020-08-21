@@ -41,7 +41,7 @@ class IIP_Map_Post_Type {
       'menu_position'        => 6,
       'register_meta_box_cb' => array( $this, 'map_add_metaboxes' ),
       'menu_icon'            => 'dashicons-location-alt',
-      'supports'             => 'title'
+      'supports'             => array( 'title' )
     );
 
     register_post_type( $this->name, $args );
