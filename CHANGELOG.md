@@ -1,17 +1,31 @@
-# Changelog
+# Change Log
 
 **All notable changes to this project will be documented in this file.**
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [2.1.0](https://github.com/IIP-Design/iip-map/tree/v2.1.0) - 2019-09-19
+## [Unreleased](https://github.com/IIP-Design/iip-map/compare/v2.1.1...HEAD)
+
+_This sections lists changes committed since most recent release_
+
+## [v2.1.1](https://github.com/IIP-Design/iip-map/compare/v2.1.0...v2.1.1) - 2020-08-21
+
+### Fixed
+
+- Convert supports values in `register_post_type` function to an array to avoid errors in WordPress versions > 5.3
+
+### Security
+
+- Updated dependencies
+
+## [v2.1.0](https://github.com/IIP-Design/iip-map/compare/v2.0.0...v2.1.0) - 2019-09-19
 
 ### Added
 
-- A filter to remove expored events from the table list
+- A filter to remove exported events from the table list
 
-## [2.0.0](https://github.com/IIP-Design/iip-map/tree/v2.0.0) - 2019-07-03
+## [v2.0.0](https://github.com/IIP-Design/iip-map/compare/v1.1.4...v2.0.0) - 2019-07-03
 
 ### Added
 
@@ -26,7 +40,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Add plugin deactivation hook to give option to delete all project and map data
 - Presentation layer and geocoding switched to MapBox
 
-## [1.1.4](https://github.com/IIP-Design/iip-map/tree/v1.1.4) - 2018-06-26
+## [v1.1.4](https://github.com/IIP-Design/iip-map/compare/v1.1.3...v1.1.4) - 2018-06-26
 
 ### Changed
 
@@ -36,7 +50,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Use ISO date format to avoid "Invalid Date" and `NaN` errors in Safari and mobile browsers
 
-## [1.1.3](https://github.com/IIP-Design/iip-map/tree/v1.1.3) - 2018-06-21
+## [v1.1.3](https://github.com/IIP-Design/iip-map/compare/v1.1.2...v1.1.3) - 2018-06-21
 
 ### Changed
 
@@ -46,13 +60,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Add 0 to the front of single digit minutes in event time value
 
-## [1.1.2](https://github.com/IIP-Design/iip-map/tree/v1.1.2) - 2018-06-19
+## [v1.1.2](https://github.com/IIP-Design/iip-map/compare/v1.1.1...v1.1.2) - 2018-06-19
 
 ### Changed
 
 - Add visual cues to indicate that OpenLayers InfoWindow is an accordion when more than one event listed
 
-## [1.1.1](https://github.com/IIP-Design/iip-map/tree/v1.1.1) - 2018-06-13
+## [v1.1.1](https://github.com/IIP-Design/iip-map/compare/v1.1.0...v1.1.1) - 2018-06-13
 
 ### Changed
 
@@ -63,7 +77,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Venue address in geocoder pulling wrong post metadata value
 
-## [1.1.0](https://github.com/IIP-Design/iip-map/tree/v1.1.0) - 2018-06-06
+## [v1.1.0](https://github.com/IIP-Design/iip-map/compare/v1.0.3...v1.1.0) - 2018-06-06
 
 ### Added
 
@@ -79,7 +93,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - When set to noon, event time was being converted to midnight
 
-## [1.0.3](https://github.com/IIP-Design/iip-map/tree/v1.0.3) - 2018-06-01
+## [v1.0.3](https://github.com/IIP-Design/iip-map/compare/v1.0.2...v1.0.3) - 2018-06-01
 
 ### Added
 
@@ -95,14 +109,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Force download of file with data when exporting project data
 - Venue address was displaying the wrong value in the administrative panel
 
-## [1.0.2](https://github.com/IIP-Design/iip-map/tree/v1.0.2) - 2018-05-25
+## [v1.0.2](https://github.com/IIP-Design/iip-map/compare/v1.0.1...v1.0.2) - 2018-05-25
 
 ### Changed
 
 - Increase geocoding batch size from 10 responses to 100 responses
 - Switch from fetch to an AJAX call when retrieving map data (promise was throwing CORS error)
 
-## [1.0.1](https://github.com/IIP-Design/iip-map/tree/v1.0.1) - 2018-05-24
+## [v1.0.1](https://github.com/IIP-Design/iip-map/compare/v1.0.0...v1.0.1) - 2018-05-24
 
 ### Added
 
@@ -112,13 +126,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Allow for non-default table prefixes when generating API endpoint
 - Add CSS rule to prevent zoom and other Google map icons from appearing blurry
-- Add closing <div> tag to shortcode output to allow for content to be added below the map
+- Add closing `<div>` tag to shortcode output to allow for content to be added below the map
 
 ### Security
 
 - Add nonces to internal AJAX calls
 
-## [1.0.0](https://github.com/IIP-Design/iip-map/tree/v1.0.0) - 2018-05-24
+## [v1.0.0](https://github.com/IIP-Design/iip-map/tree/v1.0.0) - 2018-05-24 (Initial Release)
 
 ### Added
 
