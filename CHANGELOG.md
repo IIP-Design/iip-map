@@ -5,9 +5,15 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [Unreleased](https://github.com/IIP-Design/iip-map/compare/v2.1.1...HEAD)
+## [Unreleased](https://github.com/IIP-Design/iip-map/compare/v2.1.2...HEAD)
 
 _This sections lists changes committed since most recent release_
+
+## [v2.1.2](https://github.com/IIP-Design/iip-map/compare/v2.1.1...v2.1.2) - 2020-08-23
+
+### Fixed
+
+- Downgrade ol package back down to version 5 since upgrade to 6 broke map rendering in admin page
 
 ## [v2.1.1](https://github.com/IIP-Design/iip-map/compare/v2.1.0...v2.1.1) - 2020-08-21
 
