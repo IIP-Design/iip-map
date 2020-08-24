@@ -33,7 +33,7 @@ class IIP_Map {
    */
   public function __construct() {
     $this->plugin_name = 'iip-map';
-    $this->version = 'v2.1.1';
+    $this->version = 'v2.1.2';
 
     $this->load_dependencies();
     $this->define_admin_hooks();

@@ -1,6 +1,6 @@
 {
   "name": "iip-map-admin",
-  "version": "v2.1.1",
+  "version": "v2.1.2",
   "private": true,
   "dependencies": {
     "axios": "^0.20.0",
