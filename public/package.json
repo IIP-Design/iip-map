@@ -34,7 +34,7 @@
     "glob": "^7.1.6",
     "image-webpack-loader": "^6.0.0",
     "mini-css-extract-plugin": "^0.10.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "path": "^0.12.7",
     "postcss-cli": "^7.1.1",
     "postcss-loader": "^3.0.0",
