@@ -30,7 +30,7 @@
     "git-rev-sync": "^2.0.0",
     "postcss-cli": "^7.1.1",
     "replace": "^1.2.0",
-    "simple-git": "^2.19.0",
+    "simple-git": "^3.3.0",
     "uglify-es": "^3.3.9"
   },
   "dependencies": {}
